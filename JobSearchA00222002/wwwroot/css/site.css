@@ -69,3 +69,16 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+.jobHeader {
+    display: flex;
+    gap: 1rem;
+    column-gap: 1rem;
+}
+
+    .jobHeader > [type="button"] {
+        min-height: .5in;
+        min-width: .5in;
+        border: none;
+        background-color: transparent;
+        align-items: center;
+    }

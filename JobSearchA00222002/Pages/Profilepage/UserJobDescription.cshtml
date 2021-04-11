@@ -1,0 +1,38 @@
+﻿@page
+@model JobSearchA00222002.Pages.Profilepage.UserJobDescriptionModel
+@{
+    ViewData["Title"] = "Job Description";
+}
+<div class="create-form, border-white">
+    <form method="post">
+        <hidden asp-for="Product.ID" />
+        <h1 class="font-weight-bold"> Job Description </h1>
+        <div>
+            <label asp-for="UserJobDescription.JobType"></label>
+            <div>
+                <input asp-for="UserJobDescription.JobType" />
+                <span asp-validation-for="UserJobDescription.JobType"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="UserJobDescription.UserRequirments"></label>
+            <div>
+                <input asp-for="UserJobDescription.UserRequirments" />
+                <span asp-validation-for="UserJobDescription.UserRequirments"></span>
+            </div>
+
+        </div>
+        <div asp-validation-summary="All">
+            <label class="card-title, font-weight-bold"> Error Summary</label>
+        </div>
+        <input type="submit" value="Create">
+    </form>
+</div>
+@section scripts
+{
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

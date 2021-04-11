@@ -1,10 +1,24 @@
 ﻿@page
+@using JobSearchA00222002.Models;
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    int DecCount = (int)ViewData["DecCount"];
+    List<UserJobDescription> DecList = (List<UserJobDescription>)ViewData["DecList"];
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<h5 class="font-weight-bold">Job Description</h5>
+@foreach (var dec in DecList)
+{
+    <div class="Products">
+        <div class="Products info">
+
+            <div> Name: <span> @dec.JobType</span></div>
+            <div> Price: <span>@dec.UserRequirments</span></div>
+
+        </div>
+    </div>
+}

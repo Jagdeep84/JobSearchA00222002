@@ -19,7 +19,7 @@ namespace JobSearchA00222002.Contexts
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Resume> Resumes { get; set; }
         public DbSet<SavedSearch> SavedSearches { get; set; }
-
+        public DbSet<UserJobDescription> UserJobDescriptions { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         { }
 
